@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            fontFamily: { 
+                jtb: ["JetBrains Mono", "sans-serif"], 
+            },
+
+          colors: {
+            clifford: '#da373d',
+           grey:'#817D92',
+           dg:'#24232C',
+           wm:' #E6E5EA',
+           green:'#A4FFAF',
+          
+           
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black ">
+    <section class=" w-[80%] md:w-[50%]  lg:w-[45%] mx-auto lg:mt-9">
+      <h1 class=" flex justify-center text-grey font-jtb  text-[22px]">Password Generator</h1>
+            <div class="bg-dg flex justify-between items-center lg:py-3 md:py-3 py-3  px-3 ">
+                <input type="password " id="pswd" placeholder="P4$5W0rD!" class="w-full  outline-none bg-transparent   text-[16px]   ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="copy" fill="currentColor" class="bi bi-copy dark:text-green " viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+                </svg>
+            </div>
+            <form action=""class="bg-dg mt-5 px-5 py-6 ">
+              <div >
+                <label for="Character"class="flex justify-between text-grey font-jtb mt-4">Character Length <span class="text-green">0</span></label>
+                <input type="range"min="0"max="20" value="50" class="w-full accent-green mt-4">
+                
+            
+            </div>
+          <div mt-4>
+            <input type="checkbox" class="accent-green"  id="uppercase" checked/>
+            <label for="uppercase letters" class="text-grey font-jtb">Include Uppercase Letters</label>
+           
+          </div>
+          <div >
+            <input type="checkbox" class="accent-green"  id="numbers" checked/>
+            <label for="lowercase letters" class="text-grey font-jtb">Include Lowercase Letters </label>
+           
+          </div>
+    
+          <div >
+            <input type="checkbox" class="accent-green"  id="numbers" checked/>
+            <label for="numbers" class="text-grey font-jtb">Include Numbers </label>
+           
+          </div>
+    
+          <div >
+            <input type="checkbox" class="accent-green" id="symbols" checked/>
+            <label for="symbols" class="text-grey font-jtb">Include Symbols </label>
+            
+          </div>
+        </div>
+        <div class="flex flex-row justify-center items-center bg-green mt-4">
+          <button type="button" class=" py-3  text-jtb  px-9" id="Btn">
+              Generate Password  
+            </button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right dark:text-dark" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg>
+          </div>
+
+      </div>
+  
+</div>
+</form>
+    </section>
+
+</body>
+</html>
